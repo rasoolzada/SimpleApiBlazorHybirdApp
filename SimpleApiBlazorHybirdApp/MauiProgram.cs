@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using SimpleApiBlazorHybirdApp.Services;
 
 namespace SimpleApiBlazorHybirdApp
 {
@@ -15,6 +16,7 @@ namespace SimpleApiBlazorHybirdApp
                 });
 
             builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddSingleton<MonkeyService>();
 
 #if DEBUG
     		builder.Services.AddBlazorWebViewDeveloperTools();
